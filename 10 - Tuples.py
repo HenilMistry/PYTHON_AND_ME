@@ -25,7 +25,7 @@ print("a.count(5) : ",a.count(5))
 print("a.count(21) : ",a.count(21))
 print("a.index(21) : ",a.index(21))
 
-# assignment 2 is solved from here ... ===============================================================================
+# assignment 2 was solved from here ... ===============================================================================
 # 1) tuples with different data types
 a = (1,2,3,7,45) # tuples with integer
 b = ("Henil","Mistry","Rakeshbhai") # tuple with string
