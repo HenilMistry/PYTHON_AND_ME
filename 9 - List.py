@@ -36,26 +36,32 @@ for more functions
 """
 
 # sort() method ...
+print("\n\nsort() method...")
 a.sort()
 print("after a.sort() a : ",a)
 # print(a.sort()) # this is illegal or it will be null...
 
 # reverse() method ...
-a.reverse()
+print("\n\nreverse() method...we can also do sort(reverse=True) as a option of this method...")
+a.reverse()  # try a.sort(reverse=True)...
 print("after a.reverse() a : ",a)
 
 # append() method ...
+print("\n\nappend() method...")
 a.append(45)
 print("after a.append(45) a : ",a)
 
 # pop() method ...
+print("\n\npop() method...")
 a.pop(4)
 print("after a.pop(4) a : ",a)
 
 # insert() method ...
+print("\n\ninsert() method...")
 a.insert(2,44)
 print("after a.insert(2,44) a : ",a)
 
 # remove() method ...
+print("\n\nremove() method...")
 a.remove(44)
 print("after a.remove(44) a : ",a)

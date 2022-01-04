@@ -2,11 +2,11 @@
 # Dictionary is collection of key and value pair type data
 # syntax is as shown below...
 
-Dictionary = {'a' : 5,'b' : 10,'c' : 25,"Bro" : "Shane"}
-a = {1 : "Henil",2 : "Rakeshbhai",3 : "Mistry","Bro" : "Krish"}
+Dictionary = {'a': 5, 'b': 10, 'c': 25, "Bro": "Shane"}
+a = {1: "Henil", 2: "Rakeshbhai", 3: "Mistry", "Bro": "Krish"}
 
-print("Dictionary : ",Dictionary)
-print("a[1] : ",a[1])
+print("Dictionary : ", Dictionary)
+print("a[1] : ", a[1])
 
 """
 some properties of dictionary to be known ...
@@ -28,14 +28,17 @@ get(<key>) ... returns the <value> in current dictionary with <key> passed in ar
 """
 
 # keys() method ...
-print("a.keys() : ",a.keys())
-print("list(a.keys()) : ",list(a.keys()))
+print("\n\nkeys() method...")
+print("a.keys() : ", a.keys())
+print("list(a.keys()) : ", list(a.keys()))
 
 # values() method ...
+print("\n\nvalues() method...")
 print("Dictionary.values() : ",Dictionary.values())
 print("list(Dictionary.values()) : ",list(Dictionary.values()))
 
 # update() method ...
+print("\n\nupdate() method...")
 Dictionary.update({"Heal" : "Brother"})
 print("After 'Dictionary.update({'Heal','Brother'})' : ",Dictionary)
 Relations = {
@@ -46,11 +49,62 @@ Dictionary.update(Relations)
 print("After Dictionary.update(Relations) : ",Dictionary)
 
 # get() method ...
+print("\n\nget() method...")
 print("Dictionary.get('Bro') : ",Dictionary.get('Bro'))
 print("Dictionary['Bro'] : ",Dictionary['Bro'])
 # the difference between the get() method and 'Dictionary[<key>]' ...
 print("Dictionary.get('Apple') : ",Dictionary.get("Apple")) # this will return none
+print("Dictionary['Apple'] : will throw error while get() method doesn't ...")
 # print("Dictionary['Apple'] : ",Dictionary["Apple"]) # this will throw error
+
+# creating dictionaries...
+Charotar_Inst_CSPIT = {
+    'Departments': [{
+        'Name': 'CE',
+        'Batches': {
+            'C1': [1, 2, 3, 4, 5],
+            'C2': [6, 7, 8, 9, 10]
+        }
+    }, 'ME', 'IT', 'CSE']
+}
+Charotar_Inst_DEPSTAR = {
+
+}
+Charotar_Institute = {
+    'CSPIT': Charotar_Inst_CSPIT,
+    'DEPSTAR': Charotar_Inst_DEPSTAR
+}
+Universities = {
+    'Charotar University': Charotar_Institute
+}
+print(Universities)
+
+# pop() and popItem() ....
+print("\n\npop() and popitem() methods ...")
+Dict = {
+    'Mother': 'Alkaben',
+    'Father': 'Rakeshbhai'
+}
+print("Dictionary : ", Dict)
+ax = Dict.pop("Mother")
+print("after a = Dictionary.pop('Mother') a : ", ax)
+# Dictionary.update({'Mother': 'Alkaben'})
+bx = Dict.popitem()
+print("after bx = Dict.popitem() bx : ", bx)
+
+# fromkeys() method...
+print("\n\nfromkeys() method...")
+Dict_XYZ = {}
+Dict_XYZ = Dict_XYZ.fromkeys(list(Dictionary.keys()), ["myKeys"])
+print(Dict_XYZ)
+
+# setdefault(<key>,<value>) method...
+# if key exist then doesn't do anything...
+# if key doesn't exist then add a key...
+x = Dictionary.setdefault("Mother", "Alkaben")
+print(x)
+x = Dictionary.setdefault("Bros ",["heal","het","hardik"])
+print(x)
 
 # assignment 2 was solved from here ===================================================================================
 # 1) checking whether a key is existing in dictionary or not
