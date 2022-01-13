@@ -130,4 +130,38 @@ print("max value : ", list_a[len(list_a)-1]) # max value  = at last index = (len
 
 # 5) finding most common elements from list,tuple,dictionary and their count...
 print("\n\nQuestion - 5")
-# in list we have
+# we can convert tuple into list and then apply same logic
+
+# we can convert values of dictionary in list and then apply same logic
+# we cannot use keys of dictionary as list because keys have distinct values which doesn't repeat
+
+# set also, doesn't contain duplicate element so, we cannot apply this logic because their won't be any
+# duplicate values
+
+listX = [1, 2, 4, 7, 4, 2, 1, 5, 2, 4, 2, 2, 2, 1, 5, 5, 7, 5, 8]
+listCount = []
+
+# finding the unique element and their count as a list...
+existAlready = False
+for x in range(0, len(listX)):
+    # print("range x : ", x, listX[x])
+    for i in range(0, len(listCount)):
+        # print(i, listCount[i], existAlready)
+        if listCount[i][0] == listX[x]:
+            existAlready = True
+            break
+    if existAlready:
+        existAlready = False
+    else:
+        # print("appended ", listX[x])
+        listCount.append((listX[x], listX.count(listX[x])))
+
+# finding the most common element...
+maxCount, index = 0, 0
+for i in range(0, len(listCount)):
+    if listCount[i][1] > maxCount:
+        maxCount = listCount[i][1]
+        index = i
+
+# printing most common element and it's count...
+print("Most common element in given list with it's count : ", listCount[index])
